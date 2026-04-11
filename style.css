@@ -3,4 +3,136 @@ body {
 	   and use the OS’s UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin: auto;
+  padding: 1rem;
 }
+
+nav {
+    display: flex;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #eee;
+    border-bottom: 2px solid black;
+}
+
+nav a.current {
+    border-bottom: 2px solid black;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+
+label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+}
+
+button {
+    grid-column: 1 / -1;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 1em;
+}
+.projects article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+
+.projects h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 400%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.resume {
+    max-width: 80ch;
+    margin: auto;
+    padding: 2rem;
+}
+
+.resume section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.resume h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.resume h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume h3 {
+    margin: 0;
+}
+
+.resume article {
+    margin-bottom: 1rem;
+}
+
+.resume p {
+    margin: 0.3rem 0;
+}
+
+.resume time {
+    display: block;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+.resume ul {
+    padding-left: 1.2rem;
+}
+
+.resume li {
+    margin-bottom: 0.4rem;
+}
+
+@media (min-width: 700px) {
+    .resume section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resume h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+
