@@ -4,11 +4,16 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+const BASE_PATH =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "/"
+    : "/PORTFOLIO/";
+
 let pages = [
-  { url: "/", title: "Home" },
-  { url: "/projects/", title: "Projects" },
-  { url: "/contact/", title: "Contact" },
-  { url: "/resume/", title: "Resume" },
+  { url: "", title: "Home" },
+  { url: "projects/", title: "Projects" },
+  { url: "contact/", title: "Contact" },
+  { url: "resume/", title: "Resume" },
   { url: "https://github.com/ChengszuPeng", title: "GitHub" }
 ];
 
@@ -19,18 +24,15 @@ for (let p of pages) {
   let url = p.url;
   let title = p.title;
 
+  if (!url.startsWith("http")) {
+    url = BASE_PATH + url;
+  }
+
   let a = document.createElement("a");
   a.href = url;
   a.textContent = title;
 
-  if (
-    a.host === location.host &&
-    (
-      a.pathname === location.pathname ||
-      (a.pathname === "/" && location.pathname === "/index.html") ||
-      (a.pathname.endsWith("/") && location.pathname === a.pathname + "index.html")
-    )
-  ) {
+  if (a.host === location.host && a.pathname === location.pathname) {
     a.classList.add("current");
   }
 
@@ -55,21 +57,16 @@ document.body.insertAdjacentHTML(
   `
 );
 
-// get select element
 let select = document.querySelector(".color-scheme select");
 
-// when user changes theme
 select.addEventListener("input", function (event) {
   let value = event.target.value;
 
-  // apply theme
   document.documentElement.style.setProperty("color-scheme", value);
 
-  // save preference
   localStorage.colorScheme = value;
 });
 
-// when page loads → restore saved preference
 if ("colorScheme" in localStorage) {
   let saved = localStorage.colorScheme;
 
