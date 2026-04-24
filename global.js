@@ -30,7 +30,6 @@ for (let p of pages) {
 
   let a = document.createElement("a");
   a.href = url;
-  console.log(title, a.href);
   a.textContent = title;
 
   if (a.host === location.host && a.pathname === location.pathname) {
