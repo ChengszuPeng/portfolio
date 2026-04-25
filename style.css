@@ -150,4 +150,31 @@ select {
     font: inherit;
 }
 
+#profile-stats {
+  margin-top: 40px;
+}
+
+#profile-stats h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.stat p {
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.stat h3 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
 
