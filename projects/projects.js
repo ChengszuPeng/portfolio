@@ -5,5 +5,4 @@ const projectsContainer = document.querySelector('.projects');
 
 const titleElement = document.querySelector('.projects-title');
 titleElement.textContent = `${projects.length} Projects`;
-
 renderProjects(projects, projectsContainer, 'h2');
