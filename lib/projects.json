@@ -74,7 +74,7 @@
     {
         "title": "Bikewatching Map",
         "year": 2026,
-        "image": "images/bikewatching.png",
+        "image":  "../images/bikewatching.png",
         "description": "Interactive bike traffic visualization using D3 and Mapbox.",
         "url": "https://yourusername.github.io/portfolio/bikewatching/"
     }
