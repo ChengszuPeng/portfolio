@@ -70,5 +70,12 @@
         "year": 2026,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Nobis sed nihil enim consequatur, ea nostrum dolores nesciunt iusto, veniam maiores perferendis vero nam reprehenderit laudantium aliquid? Consequatur nesciunt quia aliquam porro, architecto iure officiis praesentium. Iure, molestiae quibusdam!"
+    },
+    {
+        "title": "Bikewatching Map",
+        "year": 2026,
+        "image": "images/bikewatching.png",
+        "description": "Interactive bike traffic visualization using D3 and Mapbox.",
+        "url": "https://yourusername.github.io/portfolio/bikewatching/"
     }
 ]
